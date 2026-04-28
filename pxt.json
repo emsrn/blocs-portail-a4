@@ -13,7 +13,9 @@
         "custom.ts",
         "enums.ts",
 		"_locales\fr\blocs-portail-a4-jsdoc-strings.json",
-		"_locales\fr\blocs-portail-a4-strings.json"
+		"_locales\fr\blocs-portail-a4-strings.json",
+		"_locales\blocs-portail-a4-jsdoc-strings.json",
+		"_locales\blocs-portail-a4-strings.json"
     ],
     "testFiles": [
         "test.ts"
