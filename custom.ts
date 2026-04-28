@@ -1,5 +1,5 @@
 //% weight=100 color=#6473E3 icon="\uf085"
-namespace a4_Portail {
+namespace a4_Gate {
 
     const I2C_ADDR = 0x33
 
