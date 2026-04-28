@@ -33,15 +33,15 @@ namespace a4_Portail {
     // =========================
 
     function setAnalogInput(io: IO) {
-        writeReg(0x2c + io, pins.createBufferFromArray([2]))
+        writeReg(0x2c + io, pins.createBufferFromArray([2])) 
     }
 
-    //%block="Présence détectée par capteur PIR"
+    //%block="Motion detected by PIR sensor"
     export function pirSensor(): boolean{
         return pins.digitalReadPin(DigitalPin.P8)==1
     }
 
-    //% block="%action portail"
+    //% block="%action gate"
     export function gate(action: Gate){
         if (action == Gate.CW){      //si choix=ouvrir portail
             digitalWrite(IO.C2, GPIOState.High) //C2 à l'état haut
@@ -57,7 +57,7 @@ namespace a4_Portail {
         }
     }
 
-    //% block="%state signal lumineux"
+    //% block="%state light"
     export function led(state: State) {
         if (state == State.ON) {
             pins.digitalWritePin(DigitalPin.P0, 1)  
@@ -67,7 +67,7 @@ namespace a4_Portail {
         }
     }
 
-    //% block="%state émetteur IR"
+    //% block="%state IR emitter"
     export function emitterIR(state: State){
         if (state == State.ON) {
             digitalWrite(IO.C4, GPIOState.High)
@@ -77,19 +77,19 @@ namespace a4_Portail {
         }
     }
 
-    //%block="Bouton-poussoir %loc appuyé"
+    //%block="%loc button pressed"
     export function buttonStateBoolean(loc: ButtonLocation){
         let pin = (loc == ButtonLocation.Ext) ? DigitalPin.P1 : DigitalPin.P2 //affecte à une cte le pin correspondant au BP sélectionné par l'utilisateur
         return pins.digitalReadPin(pin)==1 //renvoie Vrai si le BP est appuyé 
     }
 
-    //%block="Capteur de fin de course %fc activé" 
+    //%block="%fc limit switch on" 
     export function sensorState(fc: LimitSwitch){
-        let pin = (fc == LimitSwitch.Open) ? DigitalPin.P15 : DigitalPin.P14 //affecte à une cte le pin correspondant au BP sélectionné par l'utilisateur
+        let pin = (fc == LimitSwitch.Opening) ? DigitalPin.P15 : DigitalPin.P14 //affecte à une cte le pin correspondant au BP sélectionné par l'utilisateur
         return pins.digitalReadPin(pin) == 1 //renvoie Vrai si le BP est appuyé 
     }
 
-    //%block="Obstacle détecté par IR"
+    //%block="Obstacle detected by IR sensor"
     export function irDetection() {
         return readDigital(IO.C5) == 1
     }

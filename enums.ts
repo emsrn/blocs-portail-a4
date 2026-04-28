@@ -1,50 +1,31 @@
 enum Gate {
-    //% block="Ouvrir"
+    //% block="Open"
     CW = 0,
-    //% block="Fermer"
+    //% block="Close"
     CCW = 1,
-    //% block="Arrêter"
+    //% block="Stop"
     Stop,
 }
 
 enum State {
-    //% block="Activer"
+    //% block="Turn on"
     ON, 
-    //% block="Désactiver"
+    //% block="Turn off"
     OFF,
 }
 
 enum ButtonLocation{
-    //% block="Extérieur"
+    //% block="Outside"
     Ext,
-    //% block="Intérieur"
+    //% block="Inside"
     Int,
 }
 
-enum Modules{
-    //%block="Capteur de fin de course ouverture"
-    LimSwitchO,
-    //%block="Capteur de fin de course fermeture"
-    LimSwitchC,
-    //%block="Bouton poussoir Extérieur"
-    BPExt,
-    //%block="Bouton poussoir Intérieur"
-    BPInt,
-    //%block="Signal Lumineux"
-    LED,
-    //%block="Moteur A1"
-    A1Motor,
-    //%block="Moteur A2"
-    A2Motor,
-    //%block="Récepteur IR"
-    IRreceptor,
-}
-
 enum LimitSwitch{
-    //%block="Ouverture"
-    Open,
-    //%block="Fermeture"
-    Closed,
+    //%block="Opening"
+    Opening,
+    //%block="Closing"
+    Closing,
 }
 
 
