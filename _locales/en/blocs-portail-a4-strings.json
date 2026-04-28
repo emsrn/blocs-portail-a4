@@ -17,5 +17,5 @@
   "a4_Portail.led|block": "%state light",
   "a4_Portail.pirSensor|block": "Motion detected by PIR sensor",
   "a4_Portail.sensorState|block": "%fc limit switch on",
-  "{id:category}A4_Portail": "A4_Portail"
+  "{id:category}A4_Gate": "A4_Gate"
 }
