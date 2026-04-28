@@ -17,5 +17,5 @@
   "a4_Portail.led|block": "%state signal lumineux",
   "a4_Portail.pirSensor|block": "Présence détectée par capteur PIR",
   "a4_Portail.sensorState|block": "Capteur de fin de course %fc activé",
-  "{id:category}A4_Portail": "A4_Portail"
+  "{id:category}A4_Gate": "A4_Portail"
 }
