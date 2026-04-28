@@ -1,0 +1,21 @@
+{
+  "ButtonLocation.Ext|block": "Extérieur",
+  "ButtonLocation.Int|block": "Intérieur",
+  "GPIOState.High|block": "Haut",
+  "GPIOState.Low|block": "Bas",
+  "Gate.CCW|block": "Fermer",
+  "Gate.CW|block": "Ouvrir",
+  "Gate.Stop|block": "Arrêter",
+  "LimitSwitch.Closing|block": "Ouverture",
+  "LimitSwitch.Opening|block": "Fermeture",
+  "State.OFF|block": "Désactiver",
+  "State.ON|block": "Activer",
+  "a4_Portail.buttonStateBoolean|block": "Boutton %loc appuyé",
+  "a4_Portail.emitterIR|block": "%state émetteur IR",
+  "a4_Portail.gate|block": "%action portail",
+  "a4_Portail.irDetection|block": "Obstacle détecté par IR",
+  "a4_Portail.led|block": "%state signal lumineux",
+  "a4_Portail.pirSensor|block": "Présence détectée par capteur PIR",
+  "a4_Portail.sensorState|block": "Capteur de fin de course %fc activé",
+  "{id:category}A4_Portail": "A4_Portail"
+}

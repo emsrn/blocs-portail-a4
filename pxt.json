@@ -11,7 +11,10 @@
         "main.ts",
         "README.md",
         "custom.ts",
-        "enums.ts"
+        "enums.ts",
+	"_locales\fr\blocs-portail-a4-jsdoc-strings.json",
+	"_locales\fr\blocs-portail-a4-strings.json",
+	"_locales\fr\pxt-portail-strings.json"
     ],
     "testFiles": [
         "test.ts"
