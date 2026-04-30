@@ -58,20 +58,20 @@ namespace a4_Gate {
     //% block="%state light"
     export function led(state: State) {
         if (state == State.ON) {
-            pins.digitalWritePin(DigitalPin.P0, 1)  
+            pins.digitalWritePin(DigitalPin.P0, 1) //écrit 1 sur la broche P0 pour allumer la LED
         }
         else if (state == State.OFF) {
-            pins.digitalWritePin(DigitalPin.P0, 0)
+            pins.digitalWritePin(DigitalPin.P0, 0) //écrit 0 sur la broche P0 pour éteindre la LED
         }
     }
 
     //% block="%state IR emitter"
     export function emitterIR(state: State){
         if (state == State.ON) {
-            digitalWrite(IO.C4, GPIOState.High)
+            digitalWrite(IO.C4, GPIOState.High) //met à l'état haut la broche C4 pour allumer l'émetteur
         }
         else if (state == State.OFF) {
-            digitalWrite(IO.C4, GPIOState.Low)
+            digitalWrite(IO.C4, GPIOState.Low) //met à l'état bas la broche C4 pour éteindre l'émetteur 
         }
     }
 
@@ -83,13 +83,14 @@ namespace a4_Gate {
 
     //%block="%fc limit switch on" 
     export function sensorState(fc: LimitSwitch){
-        let pin = (fc == LimitSwitch.Opening) ? DigitalPin.P15 : DigitalPin.P14 //affecte à une cte le pin correspondant au BP sélectionné par l'utilisateur
+        //affecte à une cte le pin correspondant au BP sélectionné par l'utilisateur
+        let pin = (fc == LimitSwitch.Opening) ? DigitalPin.P15 : DigitalPin.P14 
         return pins.digitalReadPin(pin) == 1 //renvoie Vrai si le BP est appuyé 
     }
 
     //%block="Obstacle detected by IR sensor"
     export function irDetection() {
-        return readDigital(IO.C5) == 1
+        return readDigital(IO.C5) == 1 //renvoie Vrai si le capteur détecte une présence 
     }
     
 
