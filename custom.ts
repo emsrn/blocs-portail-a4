@@ -36,7 +36,7 @@ namespace a4_Gate {
 
     //%block="Motion detected by PIR sensor"
     export function pirSensor(): boolean{
-        return pins.digitalReadPin(DigitalPin.P8)==1
+        return pins.digitalReadPin(DigitalPin.P8)==1 //renvoie vrai si le 
     }
 
     //% block="%action gate"
@@ -90,7 +90,7 @@ namespace a4_Gate {
 
     //%block="Obstacle detected by IR sensor"
     export function irDetection() {
-        return readDigital(IO.C5) == 1 //renvoie Vrai si le capteur détecte une présence 
+        return readDigital(IO.C5) == 1 //renvoie Vrai si le récepteur ne reçoit plus d'IR 
     }
     
 
