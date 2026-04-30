@@ -4,8 +4,6 @@ namespace a4_Gate {
     const I2C_ADDR = 0x33
 
     let initialized = false
-    let lastDirection = [0, 0, 0, 0]
-    let globalBrightness = 255
 
     function init() {
         if (!initialized) {
@@ -99,7 +97,7 @@ namespace a4_Gate {
     /////// Fonctions /////// 
 
     function digitalWrite(io: IO, state: GPIOState) { //fonction écrire sur un pin C (0 ou 1)
-        init()
+        ()
         setDigitalOutput(io)
         writeReg(0x39 + io, pins.createBufferFromArray([state]))
     }
