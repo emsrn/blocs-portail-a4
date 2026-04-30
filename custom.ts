@@ -77,7 +77,8 @@ namespace a4_Gate {
 
     //%block="%loc button pressed"
     export function buttonStateBoolean(loc: ButtonLocation){
-        let pin = (loc == ButtonLocation.Ext) ? DigitalPin.P1 : DigitalPin.P2 //affecte à une cte le pin correspondant au BP sélectionné par l'utilisateur
+        //affecte à une cte le pin correspondant au BP sélectionné par l'utilisateur
+        let pin = (loc == ButtonLocation.Ext) ? DigitalPin.P1 : DigitalPin.P2 
         return pins.digitalReadPin(pin)==1 //renvoie Vrai si le BP est appuyé 
     }
 
