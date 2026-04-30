@@ -36,7 +36,7 @@ namespace a4_Gate {
 
     //%block="Motion detected by PIR sensor"
     export function pirSensor(): boolean{
-        return pins.digitalReadPin(DigitalPin.P8)==1 //renvoie vrai si le 
+        return pins.digitalReadPin(DigitalPin.P8)==1 //renvoie Vrai si le capteur détecte une présence 
     }
 
     //% block="%action gate"
